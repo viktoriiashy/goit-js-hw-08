@@ -9,8 +9,8 @@ if (savedData) {
   const parsedData = JSON.parse(savedData);
   data = parsedData;
 
-  formRef.elements.email.value = parsedData.email ?? '';
-  formRef.elements.message.value = parsedData.message ?? '';
+  formRef.elements.email.value = parsedData.email || '';
+  formRef.elements.message.value = parsedData.message || '';
 }
 const inputHandler = e => {
   const input = e.target;
